@@ -8,25 +8,58 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- head section -->
 <div class="head">
     <h1 id="title">JavaScript Quiz</h1>
     <p>Let's test your knowledge!</p>
-    <h3 id="time-left">00</h3>
+    <h3 id="time-up"></h3>
+    <h3 id="time-left"></h3>
 </div>
+
+<!-- question area -->
 <div class="container">
     <div id="question">
-        <h1>Arrays in JavaScript can be used to store:</h1>
-        <button class="choice">Numbers</button>
-        <button class="choice">Strings</button>
-        <button class="choice">Booleans</button>
-        <button class="choice">All of the Above</button>
+        <p id="question"></p>
+        <h1 id="quest-area"></h1>
+        <div id="btn-sec">
+        <button class="choice" id="quest-one"></button>
+        <button class="choice" id="quest-two"></button>
+        <button class="choice" id="quest-three"></button>
+        <button class="choice" id="quest-four"></button><br><br>
+      </div>
     </div>
 </div>
 
+<!-- start input -->
 <div class="start">  
       <button id="btn">Start</button> 
+      <!-- <button id="next-btn">Next</button> -->
 </div>
 
+<!-- score area -->
+<fieldset>
+    <legend id="score-legend">Score:</legend>
+        <h5 id="right-result"></h5>
+    </h3>
+</fieldset>
+
+
+<!-- input for information -->
+
+    <label for="name" id="name-label">Name:</label>
+    <input id="name-input" type="text" placeholder="Type your name here.."><br><br><br>
+    <label for="score" id="score-label">Score:</label> 
+    <input id="score-input" type="text" placeholder="Type your score here..">
+    <br><br><br>
+    <input id="submit-button" type="submit">
+
+
+<!-- output for information -->
+<fieldset id="output-form">
+    <legend id="output-legend">You've saved:</legend>
+    <div id="name-output">Name: </div>
+    <div id="score-output">Score: </div>
+</fieldset> 
 
 <div class="footer">
     &copy David Herring 2022

@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: burlywood;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: monospace
 }
 
 .head {
@@ -16,18 +16,23 @@ body {
     font-family: monospace;
 }
 
+/* question container */
 .container {
     background-color:lightblue;
-    width: 80%;
+
     margin-left: auto;
     margin-right: auto;
     padding: 30px;
-    border: 1px solid blue;
+    border: 1px solid black;
     border-radius: 30px;
     box-shadow: 2px 3px black; 
+    margin: 20px;
 }
 
+
+/* choice buttons */
 .choice {
+    /* background-color: burlywood; */
     background-color: burlywood;
     padding: 10px;
     margin-top: 10px;
@@ -36,6 +41,7 @@ body {
     display: flex;
     width: 100%;
     border-radius: 10px;
+    
 }
 
 .choice:hover{
@@ -44,15 +50,18 @@ body {
     box-shadow: 1px 1px rgb(40, 37, 37);
 }
 
-#btn {
-    position: relative;
-    left: 40%;
+
+/* start button */
+#btn{
+
+    margin: 20px;
     font-size: 1.5rem;
     padding: 10px;
     border: .5px solid black;
     border-radius: 20px;
     top: 20px;
-    width: 150px;
+    width: 98%;
+    margin-left: 1%;
     background-color: lightblue;
 }
 
@@ -62,8 +71,96 @@ body {
     box-shadow: 1px 1px rgb(40, 37, 37);
 }
 
+
+/* result section */
+#score-legend {
+    color: black;
+    font-size: 2rem;
+    margin: 20px;
+    text-align: center;
+}
+
+#right-result {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* info input */
+#name-input {
+    margin-top: 30px;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+#name-label {
+    font-size: 2rem;
+    margin-top: 20px;
+    padding: 25px;
+}
+
+#score-input {
+    margin-top: 30px;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+#score-label{
+    font-size: 2rem;
+    margin-top: 20px;
+    padding: 25px;
+}
+
+/* submit button */
+#submit-button {
+    background-color: lightblue;
+    border-radius: 20px;
+    border: .5px solid black;
+    font-size: 1.5rem;
+    margin-left: 1%;
+    width: 98%;
+
+
+}
+
+#output-form{
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-color: rgb(192, 192, 192);
+    border-image: initial;
+    margin-top: 5%;
+}
+
+#output-legend{
+    color: black;
+    font-size: 2rem;
+    margin: 20px;
+    text-align: center;
+}
+
+#name-output{
+    color: black;
+    font-size: 2rem;
+    margin: 20px;
+    text-align: center;
+}
+
+#score-output {
+    color: black;
+    font-size: 2rem;
+    margin: 20px;
+    text-align: center;
+}
+
 .footer {
-    margin-top: 20%;
+    margin-top: 15%;
     width: 100%;
     border: 1px solid lightblue;
     background-color: lightblue;
