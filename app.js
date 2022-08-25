@@ -52,7 +52,7 @@ const countdown = setInterval (() => {
         clock.style.fontSize=('4rem');
     } 
 
-},100);
+},1000);
 }
 
 
