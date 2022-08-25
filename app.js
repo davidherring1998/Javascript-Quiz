@@ -195,7 +195,7 @@ function ask4 () {
 
 //final result 
 function finalResult () {
-    finalScore.innerHTML = 'Congrats! Your final score';
+    finalScore.innerHTML = 'Congrats! Your final score is:';
 }
 
 
