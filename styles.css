@@ -5,9 +5,17 @@ body {
     font-family: monospace
 }
 
+.head h1 {
+    background-color: lightblue;
+    border: 2px solid black;
+    padding: 15px;
+}
+
 .head {
     text-align: center;
     font-size: 2rem;
+ 
+    
 }
 .head p {
     text-align: center;

@@ -21,6 +21,7 @@ const scoreInput = document.getElementById('score-input')
 const inputBtn = document.getElementById('submit-button')
 const nameOutput = document.getElementById('name-output')
 const scoreOutput = document.getElementById('score-output')
+const wrong = document.getElementById('wrong-choice');
 
 //changing button choice display
  
@@ -51,20 +52,11 @@ const countdown = setInterval (() => {
     if (seconds <= 10) {
         clock.style.fontSize=('4rem');
     } 
+    
 
 },1000);
 }
-
-
-//making wrong answer score function
-let result = 0;
-var increment = function () {
-        result ++;
-        wrongResult.innerHTML = result;
-    }
      
-
-
 // setting first question when start is pushed.. 
 btn.addEventListener('click', ask)
 
@@ -78,17 +70,17 @@ function ask () {
 
 //setting choice button events     
     questOne.addEventListener('click', () => {
-       increment();
-
+     seconds -= 5;
+     
     })
 
     questTwo.addEventListener('click', () => {
-        increment();
+        seconds -= 5;
          
     })
 
     questThree.addEventListener('click', () => {
-        increment();
+        seconds -= 5;
         
     })
 
@@ -116,18 +108,17 @@ function ask2 () {
     })
 
     questTwo.addEventListener('click', () => {
-        
+        seconds -= 5;   
         
     })
 
     questThree.addEventListener('click', () => {
-        
+        seconds -= 5;   
     
     })
 
     questFour.addEventListener('click', () => {
-        
-        
+        seconds -= 5; 
     })
 
 
@@ -143,11 +134,11 @@ function ask3 () {
 
     //setting boolean values
     questOne.addEventListener('click', () => {
-        
+        seconds -= 5;
     })
 
     questTwo.addEventListener('click', () => {
-        
+        seconds -= 5;
         
     })
 
@@ -157,7 +148,7 @@ function ask3 () {
     })
 
     questFour.addEventListener('click', () => {
-        
+        seconds -= 5;
         
     })
 }
@@ -172,12 +163,12 @@ function ask4 () {
 
     //setting boolean values
     questOne.addEventListener('click', () => {
-        
+        seconds -= 5;
 
     })
 
     questTwo.addEventListener('click', () => {
-        
+        seconds -= 5;
         
     })
 
@@ -188,7 +179,7 @@ function ask4 () {
     })
 
     questFour.addEventListener('click', () => {
-        
+        seconds -= 5;
         
     })
 }
