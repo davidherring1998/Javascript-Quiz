@@ -2,7 +2,7 @@
 A quiz testing your Javascript knowledge!
 
 
-Test your Javascript knowledge! When you click the start button, you are presented with a timer counting down from 60 and a question. As your time runs out, the clock turns red and enlarges as it gets closer to 0! When you click the correct answer, you are presented with another one and your score is logged on the page (four questions total). When all of the questions are answered or your time runs out, the game is over and your final score is logged and you have the option to log your name and final score into local storage and the webpage.  
+Test your Javascript knowledge! When you click the start button, you are presented with a timer counting down from 60 and a question. As your time runs out, the clock turns red and enlarges as it gets closer to 0! When you click the correct answer, you are presented with another one and your score is logged on the page (four questions total), but when you click the wrong answer you will be deducted 5 seconds. When all of the questions are answered or your time runs out, the game is over and your final score is logged and you have the option to log your name and final score into local storage and the webpage.  
 
 
 links:
