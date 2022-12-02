@@ -15,45 +15,44 @@ const total = document.getElementById('total');
 const finalScore = document.getElementById('score-legend');
 let rightResult = document.getElementById('right-result');
 let wrongResult = document.getElementById('wrong-result');
-//for local storage
 const nameInput = document.getElementById('name-input')
 const scoreInput = document.getElementById('score-input')
 const inputBtn = document.getElementById('submit-button')
 const nameOutput = document.getElementById('name-output')
 const scoreOutput = document.getElementById('score-output')
 const wrong = document.getElementById('wrong-choice');
-
-//changing button choice display
+const choiceContainer = document.getElementById('container')
  
 // setting start button and some styling
 btn.addEventListener('click', countDown)
-
 
 let seconds = 60;
 clock.textContent = (`00:${seconds}`);
 
 function countDown () {
     btn.style.display=('none')
-const countdown = setInterval (() => {
+    const countdown = setInterval (() => {
     seconds--;
     clock.textContent = (`00:${seconds}`);
+    if (seconds <= 30) {
+        clock.style.color=('red');
+        clock.style.fontSize=('3rem');
+    };
+    if (seconds <= 10) {
+        clock.style.fontSize=('4rem');
+    };
     if (seconds <= 1 ) {
         clearInterval(countdown);
         clock.textContent = ('Time\'s up!');
         clock.style.fontSize=('4rem');
         clock.style.color=('black');
-    } else {
- 
-    }
-    if (seconds <= 30) {
-        clock.style.color=('red');
-        clock.style.fontSize=('3rem');
-    }
-    if (seconds <= 10) {
-        clock.style.fontSize=('4rem');
-    } 
-    
-
+        questOne.style.display='none';
+        questTwo.style.display='none';
+        questThree.style.display='none';
+        questFour.style.display='none';
+        question.style.display='none';
+        choiceContainer.style.display='none';
+    };
 },1000);
 }
      
@@ -176,33 +175,25 @@ function ask4 () {
         rightResult.innerHTML = 8;
         finalResult();
         
+        
     })
 
     questFour.addEventListener('click', () => {
         seconds -= 5;
         
     })
-}
-
-//final result 
-function finalResult () {
-    finalScore.innerHTML = 'Congrats! Your final score is:';
-}
+    finalResult()
+};
 
 
-
-//storing score and name
 inputBtn.addEventListener('click', () => {
+    console.log('working')
     const name = nameInput.value;
     const score = scoreInput.value;
 
     nameOutput.innerHTML += `${name}`;
     scoreOutput.innerHTML += `${score}`
+
+    localStorage.setItem("name", name);
+    localStorage.setItem("score", score);
 })
-
-for (let i = 0; i < localStorage.length; i++) {
-    const name = localStorage.key(i);
-    const score = localStorage.key(name);
-
-}
-
